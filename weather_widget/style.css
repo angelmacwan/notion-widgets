@@ -1,0 +1,32 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    border-radius: 12px;
+    padding: 2em;
+    color: white;
+    background-color: rgb(31, 31, 31);
+    text-align: center;
+}
+
+#cittName {
+    font-size: 1rem;
+}
+
+#temp {
+    font-size: 3.5rem;
+}
+
+#weather_icon {
+    max-height: 5em;
+    display: flex;
+    align-items: center;
+}
+
+#weather_icon>img {
+    max-height: 9rem;
+    margin: 0 auto;
+}
+
+#hum {}
