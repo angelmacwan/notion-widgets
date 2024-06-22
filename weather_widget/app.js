@@ -1,27 +1,14 @@
-let lon;
-let lat;
+// pune
+let lon = 73.7745811;
+let lat = 18.5702328;
 
-function setup() {
-    // if (navigator.geolocation) {
-    //     console.log("Location Available");
-    //     navigator.geolocation.getCurrentPosition(position);
-    // } else {
-    //     console.log("Location Not Available");
-    // }
-    position(null);
+function position() {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=6a8864f2fdcd48568bf8b4a9330cf63b`)
+        .then(data => data.json())
+        .then(data => showData(data))
 }
 
-function position(pos) {
-    // lon = pos.coords.longitude;
-    // lat = pos.coords.latitude;
-    
-    // My location in pune
-    let lon = 73.7745811;
-    let lat = 18.5702328;
-    loadJSON(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=6a8864f2fdcd48568bf8b4a9330cf63b`, getData);
-}
-
-function getData(data) {
+function showData(data) {
 
     const icon_url = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
     const cityName = data.name;
