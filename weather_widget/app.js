@@ -1,6 +1,6 @@
 // pune
-let lon = 73.7745811;
-let lat = 18.5702328;
+let lat = 22.558252;
+let lon = 72.959945;
 
 function position() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=6a8864f2fdcd48568bf8b4a9330cf63b`)
