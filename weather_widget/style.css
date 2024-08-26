@@ -11,9 +11,16 @@
     color: white;
     background-color: rgb(31, 31, 31);
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-#cittName {
+.left,
+.right {
+    align-content: center;
+}
+
+#des {
     font-size: 1rem;
 }
 
@@ -30,6 +37,20 @@
 #weather_icon>img {
     max-height: 9rem;
     margin: 0 auto;
+
+    animation: wobble 2.5s linear infinite;
 }
 
-#hum {}
+@keyframes wobble {
+    0% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(-2px);
+    }
+}
