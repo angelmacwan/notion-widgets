@@ -16,8 +16,7 @@ function showData(data) {
     const humidity = data.main.humidity;
     const weatherDescription = data.weather[0].description;
     document.getElementById('weather_icon').innerHTML = `<img src="${icon_url}" alt="${weatherDescription}">`
-    document.getElementById('cityName').innerHTML = cityName;
+    document.getElementById('des').innerHTML = `${weatherDescription} in ${cityName}`;
     document.getElementById('temp').innerHTML = `${temperature}°`;
     document.getElementById('hum').innerHTML = `${humidity}% Humidity`;
-    document.getElementById('des').innerHTML = weatherDescription;
 }
