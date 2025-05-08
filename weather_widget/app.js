@@ -1,9 +1,12 @@
-// pune
-let lat = 22.558252;
-let lon = 72.959945;
+// const appid = "6a8864f2fdcd48568bf8b4a9330cf63b";
+
+// get querystring
+let lat = window.location.search.split("=")[1].split("&")[0];
+let lon = window.location.search.split("=")[2];
+let appid = window.location.search.split("=")[3];
 
 function position() {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=6a8864f2fdcd48568bf8b4a9330cf63b`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appid}`)
         .then(data => data.json())
         .then(data => showData(data))
 }
